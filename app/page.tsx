@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { RefreshCcw } from "lucide-react";
+import { RefreshCcw, Github } from "lucide-react";
 import { FeaturedCard } from "@/components/crypto/featured-card";
 import { CryptoListItem } from "@/components/crypto/crypto-list-item";
 import type { CryptoData } from "@/lib/types";
@@ -51,10 +51,12 @@ export default function Home() {
               Real-Time Cryptocurrency Dashboard
             </p>
           </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground bg-background/50 backdrop-blur-sm rounded-full px-4 py-2">
-            <RefreshCcw className="h-4 w-4 animate-spin" />
-            Last updated: {lastUpdated}
-          </div>
+          {!loading && (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground bg-background/50 backdrop-blur-sm rounded-full px-4 py-2">
+              <RefreshCcw className="h-4 w-4 animate-spin" />
+              Last updated: {lastUpdated}
+            </div>
+          )}
         </motion.div>
 
         <motion.div
@@ -158,6 +160,11 @@ export default function Home() {
             </TabsContent>
           </Tabs>
         </motion.div>
+
+        <footer className="mt-12 text-center text-sm text-muted-foreground">
+          <p>Created by Ashutosh Singh</p>
+      
+        </footer>
       </div>
     </main>
   );
