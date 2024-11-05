@@ -11,6 +11,7 @@ CryptoVision is a real-time cryptocurrency dashboard built with Next.js, providi
 - Detailed list view with expandable information
 - Sorting options: All, Trending, Top Gainers, Top Losers
 - Responsive design for desktop and mobile devices
+- The API used in the crypto tracker is the CoinGecko API
 
 ## Technologies Used
 
